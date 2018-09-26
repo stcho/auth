@@ -56,10 +56,18 @@ app.post('/api/login', async (req, res) => {
   }
 })
 
-app.get('/api/posts', checkJwtToken, async(req, res) => {
+app.post('/api/users', checkJwtToken, async(req, res) => {
   try {
     res.sendStatus(200)
   } catch(err) {
     res.sendStatus(500)
   }
 })
+
+// app.get('/api/posts', checkJwtToken, async(req, res) => {
+//   try {
+//     res.sendStatus(200)
+//   } catch(err) {
+//     res.sendStatus(500)
+//   }
+// })
